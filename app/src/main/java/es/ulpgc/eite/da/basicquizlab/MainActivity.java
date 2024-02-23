@@ -21,13 +21,14 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    //initLayoutData();
-    //linkLayoutComponents();
-    //initLayoutContent();
+    initLayoutData();
+    linkLayoutComponents();
+    initLayoutContent();
   }
 
 
   private void initLayoutData() {
+    // Recuperar preguntas y  respuestas desde strings.xml
     questionArray=getResources().getStringArray(R.array.question_array);
     answerArray =getResources().getIntArray(R.array.answer_array);
   }
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
   private void linkLayoutComponents() {
     falseButton = findViewById(R.id.falseButton);
     trueButton = findViewById(R.id.trueButton);
+
     cheatButton = findViewById(R.id.cheatButton);
     nextButton = findViewById(R.id.nextButton);
 
@@ -43,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     resultText = findViewById(R.id.resultText);
   }
 
-  /*
+
   private void initLayoutContent() {
     falseButton.setText(R.string.false_button_text);
     trueButton.setText(R.string.true_button_text);
@@ -54,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
     resultText.setText(R.string.empty_text);
 
   }
-  */
 
-  private void initLayoutContent() {
+
+/*  private void initLayoutContent() {
     falseButton.setText("False");
     trueButton.setText("True");
     nextButton.setText("Next");
@@ -65,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     questionText.setText(questionArray[quizIndex]);
     resultText.setText("???");
 
-  }
+  }*/
 
 
   //TODO: en vez de usar un metodo para cada boton, podemos
