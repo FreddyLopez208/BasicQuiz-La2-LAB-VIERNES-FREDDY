@@ -108,8 +108,6 @@ public class MainActivity extends AppCompatActivity {
 
     // hacemos que si llegamos al final del quiz
     // volvamos a empezarlo nuevamente
-    //TODO: refactorizar en un método este codigo
-    // por si queremos implementar otras opciones posibles
     if(quizIndex == questionArray.length) {
       quizIndex =0;  // volver  a  empezar
     }
