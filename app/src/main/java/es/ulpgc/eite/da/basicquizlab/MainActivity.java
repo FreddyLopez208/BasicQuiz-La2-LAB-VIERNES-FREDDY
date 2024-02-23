@@ -52,12 +52,17 @@ public class MainActivity extends AppCompatActivity {
     nextButton.setText(R.string.next_button_text);
     cheatButton.setText(R.string.cheat_button_text);
 
-    questionText.setText(questionArray[quizIndex]);
-    resultText.setText(R.string.empty_text);
+    //  codigo repetido
+    updateQuestionData();
 
   }
-  
 
+  private void updateQuestionData(){
+
+    //  codigo repetido
+    questionText.setText(questionArray[quizIndex]);
+    resultText.setText(R.string.empty_text);
+  }
 
   //TODO: en vez de usar un metodo para cada boton, podemos
   // hacerlo usando un solo metodo para todos los botones
@@ -91,7 +96,6 @@ public class MainActivity extends AppCompatActivity {
     }
   }
 
-  //TODO: implementar boton para pasar a siguiente pantalla
   public void onCheatButtonClicked(View view) {
     // no implementado
   }
@@ -110,8 +114,7 @@ public class MainActivity extends AppCompatActivity {
       quizIndex =0;  // volver  a  empezar
     }
 
-    //TODO: refactorizar en un método este codigo repetido
-    questionText.setText(questionArray[quizIndex]); // actualizar pregunta
-    resultText.setText(R.string.empty_text);
+    //  codigo repetido
+    updateQuestionData();
   }
 }
