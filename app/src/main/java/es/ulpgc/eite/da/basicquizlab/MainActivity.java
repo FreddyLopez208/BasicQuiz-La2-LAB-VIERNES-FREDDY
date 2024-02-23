@@ -56,18 +56,7 @@ public class MainActivity extends AppCompatActivity {
     resultText.setText(R.string.empty_text);
 
   }
-
-
-/*  private void initLayoutContent() {
-    falseButton.setText("False");
-    trueButton.setText("True");
-    nextButton.setText("Next");
-    cheatButton.setText("Cheat");
-
-    questionText.setText(questionArray[quizIndex]);
-    resultText.setText("???");
-
-  }*/
+  
 
 
   //TODO: en vez de usar un metodo para cada boton, podemos
@@ -79,30 +68,26 @@ public class MainActivity extends AppCompatActivity {
 
   //TODO: impedir que podamos hacer click en el boton
   // si ya hemos contestado a la pregunta
-  public void onTrueButtonClicked(View view) {
-    if(answerArray[quizIndex] == 1) {
+  public void onTrueButtonClicked(View view) { // pulsado "True"
+    if(answerArray[quizIndex] == 1) { // 1 == True
       // correct
-      resultText.setText("Correct");
-      //resultText.setText(R.string.correct_text);
+      resultText.setText(R.string.correct_text);
     } else {
       // incorrect
-      resultText.setText("Incorrect");
-      //resultText.setText(R.string.correct_text);
+      resultText.setText(R.string.correct_text);
     }
   }
 
 
   //TODO: impedir que podamos hacer click en el boton
   // si ya hemos contestado a la pregunta
-  public void onFalseButtonClicked(View view) {
-    if(answerArray[quizIndex] == 0) {
+  public void onFalseButtonClicked(View view) { // pulsado "False"
+    if(answerArray[quizIndex] == 0) { // 0 == False
       // correct
-      resultText.setText("Correct");
-      //resultText.setText(R.string.correct_text);
+      resultText.setText(R.string.correct_text);
     } else {
       // incorrect
-      resultText.setText("Incorrect");
-      //resultText.setText(R.string.incorrect_text);
+      resultText.setText(R.string.incorrect_text);
     }
   }
 
@@ -114,19 +99,19 @@ public class MainActivity extends AppCompatActivity {
   //TODO: impedir que podamos hacer click en el boton
   // si aun no hemos contestado a la pregunta
   public void onNextButtonClicked(View view) {
-    quizIndex++;
+
+    quizIndex++; //  sig. pregunta
 
     // hacemos que si llegamos al final del quiz
     // volvamos a empezarlo nuevamente
     //TODO: refactorizar en un método este codigo
     // por si queremos implementar otras opciones posibles
     if(quizIndex == questionArray.length) {
-      quizIndex =0;
+      quizIndex =0;  // volver  a  empezar
     }
 
     //TODO: refactorizar en un método este codigo repetido
-    questionText.setText(questionArray[quizIndex]);
-    resultText.setText("???");
-    //resultText.setText(R.string.empty_text);
+    questionText.setText(questionArray[quizIndex]); // actualizar pregunta
+    resultText.setText(R.string.empty_text);
   }
 }
