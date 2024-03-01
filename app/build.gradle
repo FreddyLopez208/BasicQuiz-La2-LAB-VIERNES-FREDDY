@@ -10,9 +10,9 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testApplicationId "es.ulpgc.eite.da.basicquizlab.test"
-        testInstrumentationRunner "es.ulpgc.eite.da.basicquizlab.test.Instrumentation"
-        //testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //testApplicationId "es.ulpgc.eite.da.basicquizlab.test"
+        //testInstrumentationRunner "es.ulpgc.eite.da.basicquizlab.test.Instrumentation"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     sourceSets {
